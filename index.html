@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="gallery-title">IMAGE GALLERY</h1>
+
+<ul class="category-menu">
+  <li class="active" data-category="all" onclick="filterImages('all')">All</li>
+  <li data-category="AlAhly" onclick="filterImages('AlAhly')">AlAhly</li>
+  <li data-category="Egypt" onclick="filterImages('Egypt')">Egypt</li>
+  <li data-category="Fashion" onclick="filterImages('Fashion')">Fashion</li>
+  <li data-category="Beauty" onclick="filterImages('Beauty')">Beauty</li>
+</ul>
+
+
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <div class="image-card AlAhly">
+      <img src="images/maloul.jpg" alt="AlAhly" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Egypt">
+      <img src="images/alex.jpg" alt="Egypt" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Fashion">
+      <img src="images/fashion.jpeg" alt="Fashion" onclick="openLightbox(this)" />
+    </div>
+     <div class="image-card AlAhly">
+      <img src="images/fans.jpg" alt="AlAhly" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Beauty">
+      <img src="images/skincare.png" alt="Beauty" onclick="openLightbox(this)" />
+    </div>
+     
+    <div class="image-card Egypt">
+      <img src="images/egypt.png" alt="Egypt" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card AlAhly">
+      <img src="images/emo.jpg" alt="AlAhly" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Fashion">
+      <img src="images/f2.jpg" alt="Fashion" onclick="openLightbox(this)" />
+    </div>
+     <div class="image-card AlAhly">
+      <img src="images/22.jpg" alt="AlAhly" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Beauty">
+      <img src="images/nails.jpg" alt="Beauty" onclick="openLightbox(this)" />
+    </div>
+     <div class="image-card Fashion">
+      <img src="images/f3.jpg" alt="Fashion" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Beauty">
+      <img src="images/makeup.jpg" alt="Beauty" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card Egypt">
+      <img src="images/nature.jpg" alt="Egypt" onclick="openLightbox(this)" />
+    </div>
+     <div class="image-card Fashion">
+      <img src="images/f4.jpg" alt="Fashion" onclick="openLightbox(this)" />
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

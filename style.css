@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000000;
+  text-align: center;
+}
+
+.gallery-title {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+
+/* Category Menu - Horizontal Full Width with icon and text inline */
+.category-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #333;
+}
+
+.category-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+    font-weight: bold;
+}
+
+.category-menu li .icon {
+  font-size: 18px;
+  color: #888;
+}
+
+.category-menu li:hover {
+  color: #fff;
+}
+
+.category-menu li.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: start;
+  gap: 15px;
+  padding: 20px;
+}
+
+
+.image-card {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.image-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+@media (max-width: 600px) {
+  .prev, .next {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 30px;
+    right: 20px;
+  }
+}
+
+.image-card.hidden {
+  display: none;
+}
+
+.category-menu li {
+  cursor: pointer;
+  user-select: none;
+}
+
+ 
